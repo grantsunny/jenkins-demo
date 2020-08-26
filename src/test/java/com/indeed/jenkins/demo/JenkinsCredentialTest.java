@@ -21,10 +21,10 @@ class JenkinsCredentialTest {
   @Test
   void test() throws SQLException {
 
-    System.out.println(DATABASE_HOST);
-    System.out.println(DATABASE_NAME);
-    System.out.println(USERNAME);
-    System.out.println(PASSWORD);
+    System.out.println("+++" + DATABASE_HOST + (DATABASE_HOST.equals("localhost")?"Not Updated":"Updated"));
+    System.out.println("+++" + DATABASE_NAME);
+    System.out.println("+++" + USERNAME);
+    System.out.println("+++" + PASSWORD + (PASSWORD.equals("")?"Not Updated":"Updated"));
 
 
     Connection connection = DriverManager.getConnection(
