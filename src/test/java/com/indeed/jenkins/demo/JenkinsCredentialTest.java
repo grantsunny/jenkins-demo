@@ -21,6 +21,12 @@ class JenkinsCredentialTest {
   @Test
   void test() throws SQLException {
 
+    System.out.println(DATABASE_HOST);
+    System.out.println(DATABASE_NAME);
+    System.out.println(USERNAME);
+    System.out.println(PASSWORD);
+
+
     Connection connection = DriverManager.getConnection(
         String.format("jdbc:postgresql://%s:5432/%s", DATABASE_HOST, DATABASE_NAME),
         USERNAME,
