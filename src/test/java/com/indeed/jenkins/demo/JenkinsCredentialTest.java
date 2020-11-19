@@ -35,11 +35,13 @@ public class JenkinsCredentialTest {
         USERNAME,
         PASSWORD);
 
+
+      String sql = "I want to fail this case";
+      //String sql = "SELECT column_name FROM information_schema.columns WHERE table_name = 'jobs'";
       Statement statement = connection.createStatement();
-      ResultSet resultSet = statement.executeQuery("SELECT column_name FROM information_schema.columns "
-          + "WHERE table_name   = 'jobs'");
 
 
+      ResultSet resultSet = statement.executeQuery(sql);
       Set<String> columns = new LinkedHashSet<String>();
       System.out.print("|");
       while (resultSet.next()) {
