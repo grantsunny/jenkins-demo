@@ -36,8 +36,8 @@ public class JenkinsCredentialTest {
         PASSWORD);
 
 
-      String sql = "I want to fail this case";
-      //String sql = "SELECT column_name FROM information_schema.columns WHERE table_name = 'jobs'";
+      //String sql = "I want to fail this case";
+      String sql = "SELECT column_name FROM information_schema.columns WHERE table_name = 'jobs'";
       Statement statement = connection.createStatement();
 
 
