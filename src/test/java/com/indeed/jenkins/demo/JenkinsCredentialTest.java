@@ -8,9 +8,11 @@ import java.sql.Statement;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class JenkinsCredentialTest {
+import com.adaptavist.tm4j.junit.annotation.TestCase;
+
+public class JenkinsCredentialTest {
 
   private static String
     DATABASE_HOST = System.getProperty("databaseHost", "localhost"),
@@ -19,7 +21,8 @@ class JenkinsCredentialTest {
     PASSWORD = System.getProperty("passWord", "");
 
   @Test
-  void test() throws SQLException {
+  @TestCase(key ="TES-T1")
+  public void test() throws SQLException {
 
     System.out.println(DATABASE_HOST);
     System.out.println(DATABASE_NAME);
